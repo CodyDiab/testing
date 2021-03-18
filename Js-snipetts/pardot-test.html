@@ -61,3 +61,66 @@
 </script>
 </body>
 </html>
+
+
+
+
+<style>
+  .switch-toggle {
+      width:160px;
+      height:50px;
+      float: left;
+      background: #242729;
+      display:flex;
+      justify-content: space-evenly;
+      align-items: center;
+      border-radius: 34px;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #000;
+   
+       
+   
+   }
+   .switch-toggle input {
+     position: absolute;
+     opacity: 0;
+   }
+   .switch-toggle input + label {
+   
+     float:left;
+     color: #fff;
+     cursor: pointer !important;
+   }
+   .switch-toggle input:checked + label {
+     background:  #00C3EF;
+     border-radius: 34px;
+   }
+  label{
+       font-size: larger;
+       padding:10px 15px 10px 15px;
+   }
+  
+   .euro,.gbp{
+    display: none; 
+   }
+  
+  
+   
+  </style>
+   <div class="switch-toggle switch-3 switch-candy">
+  
+          <input id="euro" name="state-d" type="radio"  />
+          <label class="euroText" for="euro" onclick="setEuro()">€</label>
+        
+          <input id="usd" name="state-d" type="radio" checked="checked" />
+          <label class="usdText " for="usd"  onclick="setUsd()">$</label>
+        
+          <input id="gbp" name="state-d" type="radio"  />
+          <label class="gbpText" for="gbp" onclick="setGbp()">£</label>
+        
+        </div>
+      

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./toggle.css">
+</head>
+<body>
+    <!-- <div class="switch-toggle switch-3 switch-candy">
+
+        <input id="euro" name="state-d" type="radio" checked="" />
+        <label class="euroText" for="euro" onclick="setEuro()">€</label>
+      
+        <input id="usd" name="state-d" type="radio" checked="checked" />
+        <label class="usdText" for="usd" class="disabled" onclick="setUsd()">$</label>
+      
+        <input id="gbp" name="state-d" type="radio" />
+        <label class="gbpText" for="gbp" onclick="setGbp()">£</label>
+      
+      </div> -->
+      <form action="" id="searchTypeToggle">
+       <div></div>
+        <label class="selected">
+          <input onclick="setUsd()" type="radio" name="searchtype" data-location="0" value="one">
+          <div >$</div>
+        </label>
+        <label >
+          <input onclick="setEuro()"  type="radio" name="searchtype" data-location="calc(100% )" value="two">
+          <div >€</div>
+        </label>
+        <label>
+          <input onclick="setGbp()" type="radio" name="searchtype" data-location="calc(200% )" value="three">
+          <div>£</div>
+        </label>
+      </form>
+      <div> 
+        <p>
+      
+          
+              <span class="usd">$1,000</span>
+              <span class="euro">€825</span>
+              <span class="gbp">£700</span>
+          </p>
+      </div>
+      <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+      <script>
+          $(document).ready(function(event){
+  $('form input').click(function(event){
+    $('form > div').css('transform', 'translateX('+$(this).data('location')+')');
+    $(this).parent().siblings().removeClass('selected');
+    $(this).parent().addClass('selected');
+  });
+});
+//           var usd = true
+//   function toggleCurrency() {
+//     var usdPrices = document.querySelectorAll(".usd")
+//     var euroPrices = document.querySelectorAll(".euro")
+//     if (usd){
+//       for(let i=0;i < usdPrices.length; i++){
+//         usdPrices[i].style.display = "none";
+//         euroPrices[i].style.display = "block";
+//       }
+     
+//       usd = false;
+//       console.log("euro active")
+//     } else if(!usd){
+//       for(let i=0;i < euroPrices.length; i++){
+//         euroPrices[i].style.display = "none";
+//         usdPrices[i].style.display = "block";
+//       }
+//       usd = true;
+//       console.log("usd active")
+//     }
+//   }
+  const usdPrices = document.querySelectorAll(".usd")
+  const euroPrices = document.querySelectorAll(".euro")
+  const gbpPrices = document.querySelectorAll(".gbp")
+
+function setUsd(){
+    console.log('USD active')
+        for(let i=0;i < usdPrices.length; i++){
+        euroPrices[i].style.display = "none";
+        usdPrices[i].style.display = "block";
+        gbpPrices[i].style.display = "none" ;
+    }
+}
+function setEuro(){
+    console.log('Euro active')
+    for(let i=0;i < euroPrices.length; i++){
+        euroPrices[i].style.display = "block";
+        usdPrices[i].style.display = "none";
+        gbpPrices[i].style.display = "none" ;
+    }
+}
+function setGbp(){
+    console.log('GPB active')
+    for(let i=0;i < gbpPrices.length; i++){
+        euroPrices[i].style.display = "none";
+        usdPrices[i].style.display = "none";
+        gbpPrices[i].style.display = "block" ;
+    }
+}
+
+
+      </script>
+</body>
+</html>
