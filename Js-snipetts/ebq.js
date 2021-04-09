@@ -25,3 +25,13 @@ if(form.addEventListener){
 </script>
 
 https://www.g2.com/gated_content/tokens/1c05397a-7207-44df-978c-2d8e6807345c
+// utility function equalize height
+function equalizeHeight(elClass) {
+var maxHeight = 0;
+document.querySelectorAll(elClass).forEach(element => {if(element.offsetHeight > maxHeight) {maxHeight = element.offsetHeight}})
+ for (let i = 0; i < document.querySelectorAll(elClass).length; i++){
+  document.querySelectorAll(elClass)[i].style.height=maxHeight+"px";
+ }
+ 
+};
+equalizeHeight() 
