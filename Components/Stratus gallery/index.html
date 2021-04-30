@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+   <style>
+       .wrap{display:flex;
+      flex-direction:row;
+     justify-content: center;
+  margin:auto;
+width:100%;}
+  .carousel{width:60%;padding:10px;}
+  .thumbnails{width:40%;}
+  .thumbnails div{width:45%; display:inline-block; overflow:hidden;}
+ 
+  .featured{max-width:100%;
+  width:100%;
+  }
+  .single{
+    width:200px; /* width of container */
+    height: 200px;
+    object-fit: cover;
+   
+    Padding:10px;}
+    .selected{filter: grayscale(90%);
+       }
+  
+   </style>
+   
+</head>
+<body>
+   
+   <div class="wrap">
+        <div class="carousel">
+            <img class="featured" src="http://lukes74.sg-host.com/wp-content/uploads/2021/04/SQ_Gallery_Featured_01.jpg">
+        </div>
+        <div class="thumbnails"> 
+            <div><img class="single thumb_1 selected" onClick="switchImg(this.src);" src="http://lukes74.sg-host.com/wp-content/uploads/2021/04/SQ_Gallery_Featured_01.jpg"></div>
+            <div><img class="single thumb_2" onClick="switchImg(this.src);" src="http://lukes74.sg-host.com/wp-content/uploads/2021/04/SQ_Gallery_Featured_02.jpg"></div>
+            <div><img class="single thumb_3" onClick="switchImg(this.src);" src="http://lukes74.sg-host.com/wp-content/uploads/2021/04/SQ_Gallery_Featured_03.jpg"></div>
+            <div><img class="single thumb_4" onClick="switchImg(this.src);" src="http://lukes74.sg-host.com/wp-content/uploads/2021/04/SQ_Gallery_Featured_04.jpg"></div>
+            <div><img class="single thumb_5" onClick="switchImg(this.src);" src="http://lukes74.sg-host.com/wp-content/uploads/2021/04/SQ_Gallery_Featured_05.jpg"></div>
+            <div><img class="single thumb_6" onClick="switchImg(this.src);" src="http://lukes74.sg-host.com/wp-content/uploads/2021/04/SQ_Gallery_Featured_06.jpg"></div>
+            <div><img class="single thumb_7" onClick="switchImg(this.src);" src="http://lukes74.sg-host.com/wp-content/uploads/2021/04/SQ_Gallery_Featured_07.jpg"></div>
+            <div><img class="single thumb_8" onClick="switchImg(this.src);" src="http://lukes74.sg-host.com/wp-content/uploads/2021/04/SQ_Gallery_Featured_08.jpg"></div>
+            <div><img class="single thumb_9" onClick="switchImg(this.src);" src="http://lukes74.sg-host.com/wp-content/uploads/2021/04/SQ_Gallery_Featured_09.jpg"></div>
+            <div><img class="single thumb_10" onClick="switchImg(this.src);" src="http://lukes74.sg-host.com/wp-content/uploads/2021/04/SQ_Gallery_Featured_10.jpg"></div>
+            <div><img class="single thumb_11" onClick="switchImg(this.src);" src="hhttp://lukes74.sg-host.com/wp-content/uploads/2021/04/SQ_Gallery_Featured_11.jpg"></div>
+               
+        </div>
+    </div>
+    <script>
+        var featured = document.querySelector(".featured")
+        var singles = document.querySelectorAll(".single")
+
+      function switchImg(src) {
+        featured.classList.add("init")
+        featured.src = src
+        singles.forEach(element => { if(element.src == featured.src){element.classList.add("selected")}else if(element.src != featured.src && element.classList.contains("selected")){element.classList.remove("selected")}
+            
+        });
+      }
+    </script>
+</body>
+</html>
