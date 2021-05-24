@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- <link rel="stylesheet" href="./style.css"> -->
+    
+</head>
+<body>
+    <style>@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@0,400;0,600;0,700;0,800;1,400&display=swap');
+
+        .cta_wrap{
+            width:100%;
+            margin: auto;
+        }
+        
+        .btn-block{
+            background-image: linear-gradient(#00C3EF, #16ECD1);
+            border-radius: 10px;
+            opacity: 1;
+            display:flex;
+        }
+        .section-1{
+          width:40%;
+        }
+        .section-2{
+            width:60%;
+            padding-bottom:30px;
+        }
+        .image-wrap{
+            
+            height:100%;
+            display:flex;
+            align-content: flex-end;
+            justify-content: flex-end;
+          
+        }
+        .image-wrap img{
+            width:auto;
+            height:auto;
+            max-width: 100%;
+            padding-top: 20%;
+            margin-bottom: -10px;
+            object-fit: cover;
+            
+        }
+        .mobile-img{display:none;}
+        
+        .btn-txt{
+            text-decoration: none !important;
+            background: #000000 0% 0%;
+            border: 1px solid #707070;
+            border-radius: 31px;
+            width:100%;
+            margin:auto;
+            padding:10px 40px 10px 40px;
+            font: normal normal 800 25px/50px Nunito Sans;
+            letter-spacing: 2px;
+            color: #FFFFFF !important;
+            opacity: 1;
+        }
+        
+        .cta-text{
+            max-width: 95%;
+            text-align: left;
+            font: normal normal bold 40px/50px Nunito Sans;
+            letter-spacing: 0px;
+            color: #000000;
+            opacity: 1;}
+        .text-block{
+            padding-top: 40px;
+        }
+        .quote{
+            text-align: center;
+            font: normal normal normal 20px/27px Nunito Sans;
+            letter-spacing: 0px;
+            color: #000000;
+            opacity: 1;
+        }
+       
+        
+        @media only screen and (max-width: 900px) {
+            .wrap{width:80%;}
+            .section-1,.section-2{width:100%;}
+            .cta-text{max-width: 90%;}
+            .section-2{padding: 0 20px 0 20px;}
+            .btn-block{flex-direction: column-reverse;}
+            .desktop-img{display:none;}
+            .mobile-img{display:inline;padding-right:10%;padding-top:0 !important;}
+            
+          }</style>
+    <div class="cta_wrap">
+         <div class="btn-block">
+             <div class="section-1">
+                 <div class="image-wrap">
+                      <img class="desktop-img" src="https://www.copado.com/wp-content/uploads/2021/05/Copado-gal-pointing.png" alt="illustration">
+                      <img class="mobile-img" src="https://www.copado.com/wp-content/uploads/2021/05/Copado-gal-reversed.png" alt="illustration">
+                 </div>
+
+             </div>
+             <div class="section-2">
+                     <h2 class="cta-text">Contact us to learn how Copado can help you achieve DevSecOps success.</h2>
+                    <a class="btn-txt">CONTACT US</a>
+             </div>
+
+         </div >
+         <div class="text-block">
+              <p class="quote">      
+              "Copado is the leading DevOps platform enabling the world’s largest digital transformations on Salesforce. Copado accelerates Salesforce deployments, simplifies the release process, increases developer productivity and maximizes return on cloud investments.
+              </p>
+              <p class="quote">
+                More than 500 of the world’s largest digitally transformed companies run on Copado including Boston Scientific, Coca-Cola, Fair Trade, Linde, MassMutual, Schneider Electric and Shell. Copado processes over 50 million DevOps transactions per month and is rated with a 100% score on the Salesforce AppExchange."
+
+              </p>
+         </div>
+
+    </div>
+</body>
+</html>
